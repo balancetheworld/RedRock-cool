@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 创建对象1,new
+    let obj1 = new Object();
+    obj1.name = "mob";
+    obj1.age = 14;
+    console.log(obj1.name);
+
+    //创建一个对象,并添加属性
+    let obj2 = new Object();
+    obj2["name"] = "bokumo";
+    obj2["age"] = "10000";
+    alert(obj2.name)
+
+    //创建一个对象2,对象字面量
+    let obj3 = {
+      name: "xixiu",
+      age: 24,
+    }
+    console.log(obj3.name);
+
+    //创建一个对象3，函数
+    function dog(name, age) {
+      this.name = name
+      this.age = age
+    }
+    const dog1 = new dog('dahuang', 5);
+    const dog2 = new dog('achai', 7);
+    alert(dog1.name)
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
