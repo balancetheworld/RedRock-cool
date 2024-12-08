@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 通过script标签引入js文件 ，如果是单独js文件夹就用js/script.js-->
+  <script src="script.js">引入后里面不再写内容</script>
+  <!-- 将js属性写到script标签中 -->
+  <script>
+    alert("未满十八岁禁止访问！");
+    document.write("你好呀！")
+    // 向控制台输出一个内容
+    console.log("你们好呀!")
+    var Chinese = prompt("请输入你的语文成绩：");
+    var math = prompt("请输入你的数学成绩：");
+    var English = prompt("请输入你的英语成绩：");
+    if (Chinese >= 90 && math >= 90 && English >= 90) {
+      alert("不是哥们儿，这么厉害的吗");
+    }
+    else if ((Chinese >= 90 && math >= 90) || (Chinese >= 90 && English >= 90) || (math >= 90 && English >= 90)) {
+      alert("可以可以，还是不错的");
+    }
+    else if (Chinese >= 90 || math >= 90 || English >= 90) {
+      alert("看得出来你喜欢哪个学科了哈哈");
+    }
+    else {
+      alert("你个垃圾，每科都不好");
+    }
+
+    var bool = true;
+    var a = 11;
+    bool = a < 10;
+    bool = Number(bool);
+    console.log(bool);
+  </script>
+</head>
+
+<body>
+  <!-- 将js代码写到onclick属性中，点击按钮时js属性才会出现 -->
+  <button onclick="alert('不要点我');">点击</button>
+  <!-- 将js代码写在超链接属性中，点击超链接执行js,
+ 如果没有后面的alert部分则可以点但不弹出任何东西 -->
+  <a href="javascript:alert('都说了不要点我啦！');">不要点</a>
+</body>
+
+</html>
