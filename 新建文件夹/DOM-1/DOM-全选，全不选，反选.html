@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function () {
+      let All = document.getElementById("All");
+      All.onclick = function () {
+        let Items = document.getElementsByName("items");
+        for (var i = 0; i < Items.length; i++) {
+          Items[i].checked = true;
+        }
+      }
+      None.onclick = function () {
+        let Items = document.getElementsByName("items");
+        for (var i = 0; i < Items.length; i++) {
+          Items[i].checked = false;
+        }
+      }
+      Rev.onclick = function () {
+        let Items = document.getElementsByName("items");
+        for (var i = 0; i < Items.length; i++) {
+          if (Items[i].checked == true) {
+            Items[i].checked = false;
+          }
+          else {
+            Items[i].checked = true;
+          }
+        }
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    <b>请选择您的爱好</b>
+    <br />
+  </div>
+  <div id="divlist">
+    <input type="checkbox" name="items" value="内卷">内卷
+    <input type="checkbox" name="items" value="疯狂内卷">疯狂内卷
+    <input type="checkbox" name="items" value="拼命内卷">拼命内卷
+    <input type="checkbox" name="items" value="使劲内卷">使劲内卷
+    <br />
+    <input type="button" id="All" value="全选">
+    <input type="button" id="None" value="全不选">
+    <input type="button" id="Rev" value="反选">
+  </div>
+</body>
+
+</html>
